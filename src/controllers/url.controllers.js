@@ -17,6 +17,8 @@ let run_shorten = (req, res) => {
     item.original_url = original_url
     item.short_url = process.env.APP_URL + gen()
     item.save((err) => {if(err){console.error(err)}})
+  } else {
+    res.json("Wrong url format")
   }
   res.json({"original_url": item.original_url, "short_url": item.short_url})
 }
