@@ -29,7 +29,6 @@ let redirectOrig = (req, res) => {
         console.error(err)
       }
       else{
-        res.json("REDIRECTING")
         res.redirect(result[0].original_url)
       }
     })
