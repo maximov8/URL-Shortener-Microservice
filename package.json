@@ -1,0 +1,24 @@
+{
+  "name": "url_shortener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "babel src --out-dir dist",
+    "start": "node dist/app.js"
+  },
+  "keywords": ["url", "heroku"],
+  "author": "Denis Maximov",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.3"
+  },
+  "engines": {
+    "node": "7.7.2"
+  }
+}
