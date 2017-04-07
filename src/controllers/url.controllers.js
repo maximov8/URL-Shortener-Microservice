@@ -24,7 +24,7 @@ let run_shorten = (req, res) => {
 let redirectOrig = (req, res) => {
   let url = process.env.APP_URL + req.params.short
   if(url != process.env.APP_URL + 'favicon.ico') {
-    Schema_url.find({short_url: req.params.short}, (err, result) => {
+    Schema_url.find({short_url: process.env.APP_URL + req.params.short}, (err, result) => {
       if(err){
         console.error(err)
       }
