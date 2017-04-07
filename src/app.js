@@ -2,7 +2,8 @@ import express from 'express'
 import bodyParser from 'body-parser'
 
 import mongoose from 'mongoose'
-mongoose.connect(process.env.MONGODB_URI, (err) => {
+let uri = 'mongodb://newbee:newbee@ds155080.mlab.com:55080/url_shortener'
+mongoose.connect(process.env.MONGODB_URI || uri, (err) => {
   if (err) {
     console.error(err)
   }
